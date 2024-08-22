@@ -26,6 +26,7 @@
 
 body {
   background: var(--background) no-repeat center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -159,4 +160,15 @@ p {
   line-height: 24px 0; /* 171.429% */
   text-align: center;
   padding: 24px 0;
+}
+
+/*media queries */
+@media (min-width: 700px) {
+  :root {
+    --background: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --background: url(./assets/bg-desktop-light.jpg);
+  }
 }
