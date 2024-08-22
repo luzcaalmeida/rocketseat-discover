@@ -82,16 +82,20 @@ body * {
 
   position: absolute;
   z-index: 1;
-  top: 50%;
   left: 0;
+  top: 50%;
   transform: translateY(-50%);
+
+  animation: slide-out 0.3s forwards;
+}
+
+#switch button:hover {
+  transition: outline 0.1s;
+  outline: 6px solid var(--highlight);
 }
 
 .light #switch button {
-  top: 50%;
-  left: initial;
-  right: 0;
-  transform: translateY(-50%);
+ animation: slide-in 0.3s forwards;
 }
 
 /* links */
@@ -170,5 +174,23 @@ p {
 
   .light {
     --background: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* criar animações */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
